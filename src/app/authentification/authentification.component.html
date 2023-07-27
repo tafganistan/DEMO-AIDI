@@ -1,0 +1,102 @@
+<!-- CONTAINER DE LA PAGE -->
+<div class="container-bloc-auth animate__animated animate__fadeIn">
+    <!-- NAVBAR AUTHENTIFICATION -->
+    <nav class="navbar navbar-expand-lg  navbar-authentification">
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand">
+                <img src="../../assets/backgrounds/Ministere_logoB.png" alt="logo" width="50" height="50" class="d-inline-block"/>
+                <span> A I D I </span>
+            </a>
+
+
+            <ul class="nav justify-content-center collapse navbar-collapse" id="navbarText">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Centre d'aide </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> A propos </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Politique de sécurité </a>
+                </li>
+            </ul>
+
+
+            <button type="button" class="btn btn-general btn-inscription"> Enregistrement </button>
+            <button type="button" class="btn btn-general btn-connexion"> Connexion </button>
+
+        </div>
+    </nav>
+
+
+    <!-- BLOC DE CODE CONTENANT LE TEXTE STATIQUE A GAUCHE ET LES INPUTS À DROITE  -->
+    <div class="row rw-bloc-auth text-center">
+        <!-- BLOC DE CODE DE GAUCHE  -->
+        <div class="col-lg-7 rw-bloc-auth_left">
+            <img src="../../assets/backgrounds/Ministere_logoB.png" width="190" alt="logo">
+            <h6> AGENCE IVOIRIENNE DE DISTRIBUTION INTÉLLIGENTE DE L'INFORMATION </h6>
+            <p> Plateforme algorithmique de distribution ciblée de l'information en proximité </p>
+        </div>
+
+        <!-- BLOC DE CODE DE DROITE  -->
+        <div class="col-lg-5 rw-bloc-auth_right">
+            <!-- FORMULAIRE DE CONNEXION  -->
+            <form action="#" class="form-connexion">
+                <div class="row login-bloc">
+                    <div class="col-lg-12 col-md-6 login-bloc_input login-bloc_input--number">
+                        <input type="text" class="form-control" placeholder="Numero de téléphone" aria-label="Numero de téléphone">
+                    </div>
+                    <div class="col-lg-12 col-6 login-bloc_input login-bloc_input--password">
+                        <input type="password" class="form-control" placeholder="Mot de passe" aria-label="Mot de passe">
+                    </div>
+                    <div class="col-12 login-bloc_submit">
+                        <button type="submit" class="btn btn-logIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- FORMULAIRE D'INSCRIPTION  -->
+            <form action="#" class="form-inscription">
+                <div class="row signIn-bloc">
+                    <div class="col-lg-12 col-md-6 signIn-bloc_input signIn-bloc_input--fullname">
+                        <input type="text" class="form-control" placeholder="Nom complet" aria-label="Nom complet">
+                    </div>
+                    <div class="col-lg-12 col-md-6 signIn-bloc_input signIn-bloc_input--number">
+                        <input type="text" class="form-control" placeholder="Numero de téléphone" aria-label="Numero de téléphone">
+                    </div>
+                    <div class="col-lg-12 col-md-6 signIn-bloc_input signIn-bloc_input--password">
+                        <input type="password" class="form-control" placeholder="Mot de passe" aria-label="Mot de passe">
+                    </div>
+                    <div class="col-lg-12 col-md-6 signIn-bloc_input signIn-bloc_input--confirmPassword">
+                        <input type="password" class="form-control" placeholder="Confirmation de mot de passe" aria-label="Confirmation de mot de passe">
+                    </div>
+                    <div class="col-12 signIn-bloc_submit">
+                        <button class="btn btn-signIn" routerLink="authentification/centre-d-interet">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="demo">
+    <div class="row">
+        <img src="../../assets/backgrounds/Ministere_logoB.png" width="190" alt="logo">
+        <h6> LA DÉMO DE LA PLATEFORME N'EST PAS DISPONIBLE SUR LES TERMINAUX MOBILES </h6>
+    </div>
+</div>

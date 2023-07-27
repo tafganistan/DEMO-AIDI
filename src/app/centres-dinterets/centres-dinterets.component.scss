@@ -1,0 +1,288 @@
+@import "../partials/utils/variables";
+.container-bloc-interest{
+    width: $full-percent;
+    height: $full-vh;
+    filter: blur(3px);
+    @include centered;
+}
+
+/*/ BLOC DE CODE CONTENANT LE TEXTE STATIQUE A GAUCHE ET LES INPUTS À DROITE /*/
+.rw-bloc-interest{
+    margin: 1%;
+    margin-top: -8vh;
+    width: $full-percent;
+    --animate-duration: 300ms;
+    --animate-delay: 0.3s;
+    @include centered;
+    &_left{
+        margin-top: 0vh;
+        margin-left: -17%;
+        img {
+            background-size: contain;
+            width: 65%;
+        }
+    }
+
+    &_right{
+        text-align: start;
+        margin-left: -10%;
+        margin-top: 7vh;
+        .p1{
+            font-size: $size-small;
+            margin-left: 3px;
+            letter-spacing: 4px;
+        }
+        h6{
+            font-family: $family-bold;
+            font-size: $size-middle;
+            margin-top: -1vh;
+            margin-bottom: 3vh;
+            width: 95%;
+            text-align: start;
+            svg{
+                margin-top: -0.5vh;
+                margin-left: 5px;
+                color: $clementine;
+            }
+        }
+        .p2 {
+            font-size: 0.9rem;
+            margin-top: 0vh;
+        }
+    }
+
+    &_bottom{
+        width: auto;
+        height: 140px;
+        background: linear-gradient(90deg, rgba(244,244,244, .2) 0%, rgba(247,127,0, .03) 100%);
+        margin-top: 0vh;
+        .row {
+            padding: $null;
+            margin: $null;
+            height: $full-percent;
+            $width: $full-percent;
+            @include centered;
+            .btn-general {
+                width: 180px;
+                height: 40px;
+                border-radius: 20px;
+                background: linear-gradient(90deg, rgba(247,127,0, .4) 0%, rgba(247,127,0, .2) 0%, rgba(244,244,244, .3) 100%);
+                font-size: $size-normal;
+                margin-top: 6vh;
+            }
+        }
+    }
+}
+
+.swiper{
+    width: 90%;
+    height: 140px;
+    margin-top: -1vh;
+    .swiper-slide{
+        @include centered;
+        .row {
+            width: $full-percent;
+            height: $full-percent;
+            .input-group{
+                @include centered;
+                input {
+                    background: transparent;
+                    height: 100px;
+                    width: 100px;
+                    padding: 30px;
+                    border: 1px solid silver;
+                    cursor: pointer;
+                    @include centered;
+                    &:checked:after {
+                        content: '';
+                        display: block;
+                        left: 9px;
+                        width: 30px;
+                        height: 38px;
+                        border: solid $clementine;
+                        border-width: 0 7px 7px 0;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+    .swiper-button-prev, .swiper-button-next {
+        color: $white;
+        background: rgba(247, 127, 0, .8);
+        height: 35px;
+        width: 35px;
+        border-radius: 100%;
+
+        &::after, &::after{
+            font-size: 10px!important ;
+        }
+    }
+}
+
+//ALERT CONTAINER
+.alert-container {
+    width: $full-percent;
+    height: $full-percent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    @include centered;
+    .display-alerts {
+        height: 10vh;
+        width: auto;
+        z-index: 30;
+        @include centered;
+        overflow: hidden;
+        .row {
+            width: $full-percent;
+            height: $full-percent;
+            padding: 0;
+            margin: 0;
+            a {
+                text-decoration: none;
+                color: $black;
+            }
+        }
+    }
+}
+
+//AN ALERT
+.an-alert {
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2vh;
+    border-radius: 4px;
+    cursor: pointer;
+    @include centered;
+    p {
+        @include centered;
+        svg {
+            color: rgba(247, 127, 0, .4);
+            position: relative;
+            top: 4px;
+        }
+        span {
+            margin-left: 10px;
+            margin-top: 1vh;
+            font-weight: bold;
+        }
+        .bi-x-circle {
+            color: $black;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 1200PX) -----------------------------------------------------------/*/
+@media screen and (max-width: 1200px) {
+    /*/ BLOC DE CODE CONTENANT LE TEXTE STATIQUE A GAUCHE ET LES INPUTS À DROITE /*/
+    .rw-bloc-interest{
+        &_left{
+            img {
+                width: 75%;
+            }
+        }
+
+        &_right{
+            h6{
+                font-size: $size-middle-lg;
+            }
+            .p2 {
+                font-size: $size-small;
+            }
+        }
+
+        &_bottom{
+            .row {
+                .btn-general {
+                    font-size: $size-small;
+                }
+            }
+        }
+    }
+
+    .swiper{
+        width: 100%;
+        .swiper-slide{
+            .row {
+                font-size: $size-small;
+            }
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 992PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 992px) {
+    .rw-bloc-interest{
+        &_left{
+            margin-left: 0%;
+            img {
+                width: 35%;
+            }
+        }
+
+        &_right{
+            margin-left: 0%;
+            text-align: center;
+            margin-top: 0vh;
+            .p1{
+                margin-left: -8%;
+            }
+            h6{
+                text-align: center;
+            }
+            .p2 {
+                width: 90%;
+                margin-left: 5%;
+            }
+        }
+
+        &_bottom{
+            .row {
+                .row {
+                    .btn-general {
+                        margin-top: -8vh;
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper{
+        .swiper-slide{
+            .row {
+                .input-group{
+                    input {
+                        height: 90px;
+                        width: 90px;
+                        &:checked:after {
+                            width: 25px;
+                            height: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 768PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 768px) {
+    .rw-bloc-interest{
+        &_left{
+            img {
+                width: 40%;
+            }
+        }
+    }
+
+}

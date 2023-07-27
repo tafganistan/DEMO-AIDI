@@ -1,0 +1,433 @@
+@import "../partials/utils/variables";
+.container-bloc-moteur{
+    width: $full-percent;
+    height: $full-vh;
+    @include centered;
+}
+.container-bloc-moteur-mobile {display: none;}
+
+.rw-bloc-moteur{
+    width: $full-percent;
+    height: $full-percent;
+    @include centered;
+    &_left{
+        @include centered;
+        margin-left: -9%;
+        margin-top: 7vh;
+        img {
+            width: 110%;
+        }
+    }
+
+    &_right{
+        margin-top: 0vh;
+        h6{
+            font-family: $family-bold;
+            font-size: 1.4rem;
+            text-align: start;
+            letter-spacing: 5px;
+            position: relative;
+            padding-right: 0px;
+            margin-top: 8vh;
+            margin-bottom: 5vh;
+        }
+        .p2 {
+            font-size: 0.9rem;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+        }
+        .input-group {
+            margin-top: 8vh;
+            background: linear-gradient(90deg, rgba(247,244,244, .06) 0%, rgba(247,127,0, .07) 0%, rgba(244,244,244, .07) 100%);
+            @include centered;
+            .form-control {
+                font-size: $size-normal;
+                margin: $null;
+                background: transparent;
+                height: 65px;
+                border: none;
+                outline: 0;
+                &:focus {
+                    border-color: inherit;
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                }
+            }
+            .input-group-append {
+                cursor: pointer;
+                svg {
+                    color: $black;
+                }
+                .svg2 {display: none}
+            }
+        }
+    }
+}
+
+.swiper-general{
+    height: $full-percent;
+    width: 130%;
+    margin-left: -17%;
+    @include centered;
+    display: none;
+    .swiper-slide{
+        @include centered;
+        padding-left: 13%;
+        padding-right: 12%;
+        --animate-duration: 300ms;
+        --animate-delay: 0.3s;
+        .row {
+            .p1 {
+                font-size: $size-small-lg;
+                margin-left: 3px;
+                letter-spacing: 4px;
+                position: relative;
+                width: $full-percent;
+                cursor: pointer;
+                margin-bottom: 0vh;
+                margin-top: 10vh;
+            }
+            h6{
+
+                margin-top: 3vh;
+                margin-bottom: 5vh;
+                a {
+                    text-decoration: none;
+                    color: $black;
+                }
+            }
+            .p2 {
+                margin-top: 0vh;
+                margin-bottom: 0vh;
+            }
+        }
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        color: $white;
+        background: rgba(247, 127, 0, .3);
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+
+        &::after, &::after{
+            font-size: 25px!important;
+        }
+    }
+
+    .swiper-button-prev {
+        margin-left: -10px;
+    }
+    .swiper-button-next {
+        margin-right: 0px;
+    }
+}
+
+.swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+.cover-bloc{
+    height: $full-vh;
+    width: $full-percent;
+    background: linear-gradient(30deg, rgba(244,244,244, .4), rgba(247,127,0, .5) 0%, rgba(244,244,244, .5) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    cursor: pointer;
+    @include centered;
+    display: none;
+
+    .close-cover{
+        position: fixed;
+        top: 20vh;
+        right: 5%;
+        z-index: 25;
+    }
+
+    .row-menu, .row-menu-categorie{
+        @include centered;
+        width: 80%;
+        height: $full-percent;
+        --animate-duration: 300ms;
+        --animate-delay: 0.3s;
+        &_item{
+            @include centered;
+        }
+    }
+
+    .row-menu-categorie {
+        width: 80%;
+        .swiper{
+            width: $full-percent;
+            height: $full-percent;
+            @include centered;
+            margin-top: 0vh;
+            .swiper-slide{
+                @include centered;
+                background-position: center;
+                width: $full-percent;
+                height: $full-percent;
+                margin-top: 0vh;
+                background: transparent;
+                filter: blur(0px);
+            }
+
+            .swiper-slide-active{
+                filter: blur(0px);
+                background: transparent;
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                color: $white;
+                background: transparent;
+                height: 30px;
+                width: 30px;
+                border-radius: 100%;
+
+                &::after, &::after{
+                    font-size: 25px!important;
+                    color: $black;
+                }
+            }
+
+            .swiper-button-prev {
+                margin-left: 0px;
+            }
+            .swiper-button-next {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.row-menu_item_row {
+    @include centered;
+    margin-top: 5vh;
+    &_circle {
+        height: 140px;
+        width: 140px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid $black;
+        @include centered;
+        &:hover{
+            height: 180px;
+            width: 180px;
+        }
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+
+        &--categorie {
+            height: 120px;
+            width: 120px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid $black;
+            @include centered;
+            &:hover{
+                height: 140px;
+                width: 140px;
+            }
+        }
+    }
+
+
+    &_text {
+        text-align: center;
+        margin-top: 3vh;
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 1200PX) -----------------------------------------------------------/*/
+@media screen and (max-width: 1200px) {
+
+    .rw-bloc-moteur{
+        padding: 20px;
+        padding-right: 60px;
+        &_left{
+            margin-top: 8vh;
+            margin-left: -7%;
+        }
+
+        &_right{
+            text-align: start;
+            margin-top: 5vh;
+            .p1 {
+                font-size: $size-small-lg;
+            }
+            h6{
+                font-size: 1.2rem;
+                width: 150%;
+                font-weight: $bold;
+                padding-right: 30px;
+            }
+            .p2 {
+                font-size: $size-small;
+            }
+
+            .input-group {
+                .form-control {
+                    font-size: $size-small;
+                }
+            }
+        }
+    }
+
+    .row-menu_item_row {
+        &_circle {
+            height: 120px;
+            width: 120px;
+            &:hover{
+                height: 150px;
+                width: 150px;
+            }
+        }
+
+        &_text {
+            font-size: $size-small;
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 992PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 992px) {
+    .container-bloc-moteur-pc {display: none;}
+    .container-bloc-moteur-mobile {display: block;}
+
+    .rw-bloc-moteur{
+        padding: 0;
+        margin: 0;
+        &_left{
+            padding: 0;
+            margin: 0;
+            margin-left: 0%;
+            margin-top: 0vh;
+            margin-bottom: 0vh;
+            height: 60vh;
+            width: $full-percent;
+            img {
+                width: 430px;
+                margin-top: 12vh;
+            }
+        }
+
+        &_right{
+            padding: 0;
+            margin: 0;
+            margin-top: 0vh;
+            height: 40vh;
+            width: $full-percent;
+            .p1 {
+                margin-left: 0px;
+                margin-bottom: 2vh;
+                text-align: center;
+                font-size: $size-small;
+            }
+            h6{
+                text-align: center;
+                width: 80%;
+                margin-left: 10%;
+                padding-right: 0px;
+                margin-bottom: 3vh;
+                margin-top: 0vh;
+                font-size: 1.1rem;
+
+            }
+            .p2 {
+                margin-top: 0vh;
+                margin-bottom: 0vh;
+                width: 90%;
+                margin-left: 5%;
+                text-align: center;
+                font-size: $size-small-lg;
+            }
+
+            .input-group {
+                margin-top: 3vh;
+                margin-bottom: 9vh;
+                width: 80%;
+                margin-left: 13%;
+                .form-control {
+                    text-align: center;
+                }
+
+            }
+        }
+    }
+
+    .swiper-general{
+        height: auto;
+        width: $full-percent;
+        margin-left: -1%;
+        margin-top: -14vh;
+        @include centered;
+        display: none;
+        .swiper-slide{
+            .row {
+                .p1 {
+                    width: $full-percent;
+                }
+                h6{
+                    margin-bottom: 3vh;
+                }
+            }
+        }
+
+        .swiper-button-prev {
+            margin-left: 50px;
+        }
+        .swiper-button-next {
+            margin-right: 50px;
+        }
+    }
+
+    .cover-bloc{
+        .row-menu-categorie {
+            width: $full-percent;
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 768PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 768px) {
+
+    .rw-bloc-moteur{
+        &_left{
+            img {
+                width: 380px;
+                margin-top: 10vh;
+            }
+        }
+
+        &_right{
+            .input-group {
+                margin-bottom: 8vh;
+                width: 90%;
+                margin-left: 7%;
+            }
+        }
+    }
+
+    .swiper-general{
+        margin-top: -13vh;
+        .swiper-button-prev {
+            margin-left: 10px;
+        }
+        .swiper-button-next {
+            margin-right: 10px;
+        }
+    }
+
+    .cover-bloc{
+        .row-menu{
+            width: 90%;
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 576PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 576px) {}

@@ -1,0 +1,58 @@
+@import "../../utils/variables";
+
+/*/ NAVBAR AUTHENTIFICATION /*/
+.navbar-authentification{
+    position: absolute;
+    top: 1vh;
+    left: 1%;
+    height: 10vh;
+    width: 98%;
+    background-color: rgba(255, 255, 255, 0.22);
+    background: $white-rgba;
+    z-index: 20;
+
+    .navbar-brand-mobile, .btn-categories-mobile {
+        display: none;
+    }
+
+    .navbar-toggler {
+        &:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    .nav {
+        .nav-link{
+            text-decoration: none;
+            color: $black;
+            font-size: $size-normal;
+        }
+    }
+
+    .btn-general {
+        width: 180px;
+        height: 40px;
+        border-radius: 20px;
+        background: linear-gradient(90deg, rgba(247,127,0, .8) 0%, rgba(247,127,0, .1) 0%, rgba(244,244,244, .3) 100%);
+        font-size: $size-normal;
+    }
+
+}
+
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 992PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 992px) {
+
+
+    .navbar-authentification{
+        .navbar-brand-pc, .btn-setting {
+            display: none;
+        }
+
+        .navbar-brand-mobile, .btn-categories-mobile {
+            display: block;
+        }
+    }
+
+}

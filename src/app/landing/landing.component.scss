@@ -1,0 +1,178 @@
+@import '../partials/utils/variables';
+
+.container-bloc-land{
+    width: $full-percent;
+    height: $full-vh;
+    @include centered;
+    .swiper{
+        width: 90%;
+        height: 80vh;
+        .swiper-slide {
+            width: $full-percent;
+            height: $full-percent;
+            @include centered;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            color: $white;
+            background: rgba(247, 127, 0, .4);
+            height: 80px;
+            width: 80px;
+            border-radius: 100%;
+        }
+        .swiper-button-next::after, .swiper-button-prev::after{
+            font-size: 40px!important ;
+        }
+    }
+}
+
+/*/ BLOC DE CODE CONTENANT LE TEXTE STATIQUE A GAUCHE ET LES INPUTS À DROITE /*/
+.rw-bloc-land{
+    margin: 1%;
+    width: $full-percent;
+    @include centered;
+    &_left{
+        margin-top: 0vh;
+        margin-left: -15%;
+        img {
+            width: 90%;
+        }
+    }
+
+    &_right{
+        text-align: start;
+        margin-left: -10%;
+        margin-top: 7vh;
+        h6{
+            font-family: $family-bold;
+            font-size: $size-middle;
+            margin-top: -1vh;
+            margin-bottom: 3vh;
+            width: 100%;
+            text-align: start;
+            svg{
+                margin-top: -0.5vh;
+                margin-left: 5px;
+                color: $clementine;
+            }
+        }
+        .p2 {
+            font-size: 0.9rem;
+            margin-top: 2vh;
+        }
+        p {
+            .btn-general {
+                width: 180px;
+                height: 40px;
+                border-radius: 20px;
+                background: linear-gradient(90deg, rgba(247,127,0, .9) 0%, rgba(247,127,0, .2) 0%, rgba(244,244,244, .3) 100%);
+                font-size: $size-normal;
+                margin-top: 4vh;
+                margin-left: -2px;
+                a{
+                    text-decoration: none;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 1200PX) -----------------------------------------------------------/*/
+@media screen and (max-width: 1200px) {
+    .container-bloc-land{
+        .swiper{
+            width: 96%;
+            .swiper-button-prev, .swiper-button-next {
+                height: 60px;
+                width: 60px;
+            }
+            .swiper-button-next::after, .swiper-button-prev::after{
+                font-size: 30px!important ;
+            }
+        }
+    }
+
+    .rw-bloc-land{
+        &_left{
+            img {
+                width: 100%;
+            }
+        }
+
+        &_right{
+            h6{
+                font-size: $size-middle-lg;
+            }
+            .p2 {
+                font-size: $size-small;
+            }
+            p {
+                .btn-general {
+                    font-size: $size-small;
+                }
+            }
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 992PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 992px) {
+    .container-bloc-land{
+        .swiper{
+            width: 98%;
+            height: 100vh;
+            .swiper-button-prev, .swiper-button-next {
+                height: 60px;
+                width: 60px;
+            }
+            .swiper-button-next::after, .swiper-button-prev::after{
+                font-size: 30px!important ;
+            }
+        }
+    }
+
+    .rw-bloc-land{
+        margin-top: -5vh;
+        &_left{
+            margin-left: 0%;
+            @include centered;
+            img {
+                width: 60%;
+            }
+        }
+
+        &_right{
+            text-align: center;
+            margin-left: 0%;
+            margin-top: 0vh;
+            h6{
+                font-size: $size-middle-lg;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 768PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 768px) {
+    .container-bloc-land{
+        .swiper{
+            .swiper-button-prev, .swiper-button-next {
+                height: 40px;
+                width: 40px;
+            }
+            .swiper-button-next::after, .swiper-button-prev::after{
+                font-size: 20px!important ;
+            }
+        }
+    }
+
+    .rw-bloc-land{
+        &_left{
+            img {
+                width: 70%;
+            }
+        }
+    }
+}

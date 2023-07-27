@@ -1,0 +1,438 @@
+@import "../partials/utils/variables";
+
+.container-bloc-view{
+    width: $full-percent;
+    height: $full-vh;
+    z-index: 15;
+    @include centered;
+}
+.container-bloc-view-mobile{display: none}
+
+.container-article {
+    @include centered;
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 70%;
+    margin-top: -1vh;
+    &-row {
+        width: $full-percent;
+        height: $full-percent;
+        @include centered;
+        background-color: rgba(255, 255, 255, 0.22);
+        background: $white-rgba;
+        &_left {
+            padding-left: 35px;
+            .p1{
+                font-size: $size-small-lg;
+                margin-left: 3px;
+                letter-spacing: 4px;
+                margin-bottom: 3vh;
+                width: $full-percent;
+            }
+            h4{
+                font-family: $family-bold;
+                font-size: 2.2rem;
+                margin-bottom: 8vh;
+                text-align: start
+            }
+            .p2 {
+                font-size: 0.9rem;
+                margin-top: 0vh;
+            }
+        }
+
+        &_right {
+            @include centered;
+            height: $full-percent;
+            padding: $null;
+            margin: $null;
+            .swiper{
+                width: $full-percent;
+                height: $full-percent;
+                @include centered;
+                .swiper-slide{
+                    @include centered;
+                    background-size: cover;
+                    background-position: center;
+                    width: $full-percent;
+                    height: $full-percent;
+                    background: transparent;
+                    filter: blur(20px);
+
+                    img {
+                        width: $full-percent;
+                        max-width: $full-percent;
+                        height: $full-percent;
+                        padding: $null;
+                        margin: $null;
+                    }
+                    .img-portrait {
+                        width: 55%;
+                        max-width: 55%;
+                        background-size: cover;
+                    }
+                }
+
+                .swiper-slide-active{
+                    filter: blur(0px);
+                }
+
+                .swiper-button-prev, .swiper-button-next {
+                    color: $white;
+                    background: rgba(247, 127, 0, .3);
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 100%;
+
+                    &::after, &::after{
+                        font-size: 25px!important;
+                    }
+                }
+
+                .swiper-button-prev {
+                    margin-left: 0px;
+                }
+                .swiper-button-next {
+                    margin-right: 0px;
+                }
+            }
+
+            .swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right {
+                background-image: none;
+            }
+        }
+    }
+}
+
+.others-articles-bloc{
+    position: absolute;
+    bottom: 2vh;
+    height: 10vh;
+    width: $full-percent;
+    /*background: rgb(244,244,244);
+    background: linear-gradient(90deg, rgba(244,244,244,.15) 14%, rgba(245,213,180,.2) 50%, rgba(244,244,244,.07) 85%);*/
+    background-color: rgba(255, 255, 255, 0.22);
+    background: $white-rgba;
+    cursor: pointer;
+    @include centered;
+    &-row{
+        padding: $null;
+        margin: $null;
+        width: $full-percent;
+        @include centered;
+        div {
+            text-align: center;
+            font-size: 0.9rem;
+            svg{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.cover-bloc{
+    height: $full-vh;
+    width: $full-percent;
+    background: linear-gradient(30deg, rgba(244,244,244, .4), rgba(247,127,0, .5) 0%, rgba(244,244,244, .5) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    cursor: pointer;
+    @include centered;
+    display: none;
+
+    .close-cover{
+        position: fixed;
+        top: 20vh;
+        right: 5%;
+        z-index: 25;
+    }
+
+    .row-menu, .row-menu-categorie{
+        @include centered;
+        width: 80%;
+        height: $full-percent;
+        --animate-duration: 300ms;
+        --animate-delay: 0.3s;
+        &_item{
+            @include centered;
+        }
+    }
+
+    .row-menu-categorie {
+        width: 80%;
+        .swiper{
+            width: $full-percent;
+            height: $full-percent;
+            @include centered;
+            margin-top: 0vh;
+            .swiper-slide{
+                @include centered;
+                background-position: center;
+                width: $full-percent;
+                height: $full-percent;
+                margin-top: 0vh;
+                background: transparent;
+                filter: blur(0px);
+            }
+
+            .swiper-slide-active{
+                filter: blur(0px);
+                background: transparent;
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                color: $white;
+                background: transparent;
+                height: 30px;
+                width: 30px;
+                border-radius: 100%;
+
+                &::after, &::after{
+                    font-size: 25px!important;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.row-menu_item_row {
+    @include centered;
+    margin-top: 5vh;
+    &_circle {
+        height: 140px;
+        width: 140px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid $black;
+        @include centered;
+        &:hover{
+            height: 180px;
+            width: 180px;
+        }
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+
+        &--categorie {
+            height: 120px;
+            width: 120px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid $black;
+            @include centered;
+            &:hover{
+                height: 140px;
+                width: 140px;
+            }
+        }
+    }
+
+
+    &_text {
+        text-align: center;
+        margin-top: 3vh;
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 1200PX) -----------------------------------------------------------/*/
+@media screen and (max-width: 1200px) {
+    .container-article {
+        width: 96%;
+        &-row {
+            &_left {
+                .p2 {
+                    font-size: $size-small;
+                }
+            }
+
+            &_right {
+                .swiper{
+                    .swiper-slide{
+                        .img-portrait {
+                            width: 63%;
+                            max-width: 63%;
+                            background-size: contain;
+                        }
+                    }
+
+                    .swiper-button-prev, .swiper-button-next {
+                        height: 50px;
+                        width: 50px;
+
+                        &::after, &::after{
+                            font-size: 20px!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .row-menu_item_row {
+        &_circle {
+            height: 120px;
+            width: 120px;
+            &:hover{
+                height: 150px;
+                width: 150px;
+            }
+        }
+
+        &_text {
+            font-size: $size-small;
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 992PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 992px) {
+    .container-bloc-view-pc, .others-articles-bloc{
+        display: none
+    }
+
+    .container-bloc-view-mobile{display: block;}
+
+    .container-article {
+        width: 98%;
+        margin-left: 1%;
+        height: 85vh;
+        margin-top: 13vh;
+        &-row {
+            width: $full-percent;
+            height: $full-percent;
+            @include centered;
+            background-color: rgba(255, 255, 255, 0.22);
+            background: $white-rgba;
+
+            &_right {
+                @include centered;
+                padding: $null;
+                margin: $null;
+                height: 65%;
+                .swiper{
+                    .swiper-slide{
+                        img {
+                            width: 70%;
+                            max-width: 70%;
+                        }
+                        .img-portrait {
+                            width: 36%;
+                            max-width: 36%;
+                            margin-top: 0vh;
+                        }
+                    }
+
+                    .swiper-button-prev, .swiper-button-next {
+                        height: 50px;
+                        width: 50px;
+
+                        &::after, &::after{
+                            font-size: 20px!important;
+                        }
+                    }
+
+                    .swiper-button-prev {
+                        margin-left: 30px;
+                    }
+                    .swiper-button-next {
+                        margin-right: 30px;
+                    }
+                }
+            }
+
+            &_left {
+                padding-left: 0px;
+                height: 33%;
+                width: $full-percent;
+                margin-top: 2vh;
+                .p1{
+                    text-align: center;
+                }
+                h4{
+                    font-size: $size-middle-lg;
+                    margin-top: -1vh;
+                    text-align: center;
+                }
+                .p2 {
+                    margin-top: -5vh;
+                    text-align: center;
+                    width: 90%;
+                    margin-left: 5%;
+                }
+            }
+        }
+    }
+
+    .cover-bloc{
+        .row-menu-categorie {
+            width: $full-percent;
+        }
+    }
+
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 768PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 768px) {
+    .container-article {
+        width: $full-percent;
+        margin-left: 0%;
+        &-row {
+            &_right {
+                height: 65%;
+                .swiper{
+                    .swiper-slide{
+                        img {
+                            width: 90%;
+                            max-width: 90%;
+                        }
+                        .img-portrait {
+                            width: 45%;
+                            max-width: 45%;
+                        }
+                    }
+
+                    .swiper-button-prev {
+                        margin-left: 0px;
+                    }
+                    .swiper-button-next {
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .cover-bloc{
+        .row-menu{
+            width: 90%;
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 576PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 576px) {
+    .container-article {
+        &-row {
+            &_right {
+                height: 65%;
+                .swiper{
+                    .swiper-slide{
+                        img {
+                            width: 95%;
+                            max-width: 95%;
+                        }
+                        .img-portrait {
+                            width: 55%;
+                            max-width: 55%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

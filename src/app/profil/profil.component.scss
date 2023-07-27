@@ -1,0 +1,318 @@
+@import "../partials/utils/variables";
+.container-bloc-profil{
+    width: $full-percent;
+    height: $full-vh;
+    z-index: 15;
+    @include centered;
+    &-row{
+        width: $full-percent;
+        height: $full-percent;
+        padding: 0;
+        margin: 0;
+        @include centered;
+        &_title {
+            text-align: center;
+            color: $black;
+            height: 10vh;
+            margin-top: 10vh;
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+        &_div {
+            background: rgba(247, 127, 0, .04);
+            height: 45vh;
+            padding: $null;
+            margin: $null;
+            margin-right: 10px;
+            .row {
+                width: $full-percent;
+                height: $full-percent;
+                padding: $null;
+                margin: $null;
+                padding-top: 3vh;
+                .titre{
+                    height: 5%;
+                    p {
+                        text-align: center;
+                        font-size: 21px;
+                        font-weight: bold;
+                    }
+                }
+                .input-blc {
+                    height: 70%;
+                    width: $full-percent;
+                    padding: $null;
+                    margin: $null;
+                    padding-top: 3%;
+                    overflow: auto;
+                    &_input{
+                        margin: $null;
+                        padding: $null;
+                        height: 50px;
+                        width: 95%;
+                        margin-left: 2.5%;
+                        margin-top: 10px;
+                        border-radius: 5px;
+                        background: linear-gradient(90deg, rgba(247,244,244, .03) 0%, rgba(247,127,0, .04) 0%, rgba(244,244,244, .03) 100%);
+                        .form-control {
+                            font-size: $size-small;
+                            height: $full-percent;
+                            margin: $null;
+                            background: transparent;
+                            border: none;
+                            outline: 0;
+                            &:focus {
+                                border-color: inherit;
+                                -webkit-box-shadow: none;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                    .swiper{
+                        width: $full-percent;
+                        height: $full-percent;
+                        margin-top: -1vh;
+                        .swiper-slide{
+                            @include centered;
+                            .row {
+                                width: $full-percent;
+                                height: $full-percent;
+                                .input-group{
+                                    @include centered;
+                                    input {
+                                        background: transparent;
+                                        height: 80px;
+                                        width: 80px;
+                                        padding: 30px;
+                                        border: 1px solid silver;
+                                        cursor: pointer;
+                                        @include centered;
+                                        &:checked:after {
+                                            content: '';
+                                            display: block;
+                                            left: 9px;
+                                            width: 22px;
+                                            height: 30px;
+                                            border: solid $clementine;
+                                            border-width: 0 7px 7px 0;
+                                            transform: rotate(45deg);
+                                        }
+                                    }
+                                }
+                                .form-text {
+                                    @include centered;
+                                    text-align: center;
+                                    font-size: $size-small;
+                                    margin-top: -5vh;
+                                }
+                            }
+                        }
+                        .swiper-button-prev, .swiper-button-next {
+                            color: $white;
+                            background: rgba(247, 127, 0, .8);
+                            height: 35px;
+                            width: 35px;
+                            border-radius: 100%;
+
+                            &::after, &::after{
+                                font-size: 10px!important ;
+                            }
+                        }
+                    }
+                }
+                .submit-blc {
+                    height: 20%;
+                    width: 95%;
+                    margin-left: 2.5%;
+                    @include centered;
+                    .btn-update {
+                        height: 40px;
+                        width: $full-percent;
+                        background: rgba(247, 127, 0, .08);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cover-bloc{
+    height: $full-vh;
+    width: $full-percent;
+    background: linear-gradient(30deg, rgba(244,244,244, .4), rgba(247,127,0, .5) 0%, rgba(244,244,244, .5) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    cursor: pointer;
+    @include centered;
+    display: none;
+
+    .close-cover{
+        position: fixed;
+        top: 20vh;
+        right: 5%;
+        z-index: 25;
+    }
+
+    .row-menu, .row-menu-categorie{
+        @include centered;
+        width: 80%;
+        height: $full-percent;
+        --animate-duration: 300ms;
+        --animate-delay: 0.3s;
+        &_item{
+            @include centered;
+        }
+    }
+
+    .row-menu-categorie {
+        width: 80%;
+        .swiper{
+            width: $full-percent;
+            height: $full-percent;
+            @include centered;
+            margin-top: 0vh;
+            .swiper-slide{
+                @include centered;
+                background-position: center;
+                width: $full-percent;
+                height: $full-percent;
+                margin-top: 0vh;
+                background: transparent;
+                filter: blur(0px);
+            }
+
+            .swiper-slide-active{
+                filter: blur(0px);
+                background: transparent;
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                color: $white;
+                background: transparent;
+                height: 30px;
+                width: 30px;
+                border-radius: 100%;
+
+                &::after, &::after{
+                    font-size: 25px!important;
+                    color: $black;
+                }
+            }
+
+            .swiper-button-prev {
+                margin-left: 0px;
+            }
+            .swiper-button-next {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.row-menu_item_row {
+    @include centered;
+    margin-top: 5vh;
+    &_circle {
+        height: 140px;
+        width: 140px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid $black;
+        @include centered;
+        &:hover{
+            height: 180px;
+            width: 180px;
+        }
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+
+        &--categorie {
+            height: 120px;
+            width: 120px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid $black;
+            @include centered;
+            &:hover{
+                height: 140px;
+                width: 140px;
+            }
+        }
+    }
+
+
+    &_text {
+        text-align: center;
+        margin-top: 3vh;
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 1200PX) -----------------------------------------------------------/*/
+@media screen and (max-width: 1200px) {
+    .container-bloc-profil{
+        &-row{
+            &_div {
+                width: 48%;
+            }
+        }
+    }
+    .row-menu_item_row {
+        &_circle {
+            height: 120px;
+            width: 120px;
+            &:hover{
+                height: 150px;
+                width: 150px;
+            }
+        }
+
+        &_text {
+            font-size: $size-small;
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 992PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 992px) {
+    .container-bloc-profil{
+        overflow-y: auto;
+        &-row{
+            &_title {
+                margin-top: 15vh;
+                margin-bottom: 10vh;
+                h2 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: $size-small;
+                }
+            }
+            &_div {
+                width: 90%;
+                margin-right: $null;
+                margin-bottom: 3vh;
+            }
+        }
+    }
+    .cover-bloc{
+        .row-menu-categorie {
+            width: $full-percent;
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 768PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 768px) {
+    .cover-bloc{
+        .row-menu{
+            width: 90%;
+        }
+    }
+}
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 576PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 576px) {}

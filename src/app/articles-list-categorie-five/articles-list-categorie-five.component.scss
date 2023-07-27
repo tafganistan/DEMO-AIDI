@@ -1,0 +1,489 @@
+@import "../partials/utils/variables";
+.container-bloc{
+    width: $full-percent;
+    height: $full-vh;
+    z-index: 15;
+    @include centered;
+}
+.container-bloc-mobile{display: none}
+
+.swiper{
+    width: $full-percent;
+    height: 90vh;
+    @include centered;
+    margin-top: 15vh;
+    .swiper-slide{
+        @include centered;
+        background-size: cover;
+        background-position: center;
+        width: 80%;
+        height: 80%;
+        margin-top: 7vh;
+        background: rgba(247, 127, 0, .04);
+        filter: blur(20px);
+    }
+
+    .swiper-slide-active{
+        filter: blur(0px);
+        background: $white-rgba;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        color: $white;
+        background: rgba(247, 127, 0, .3);
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+
+        &::after, &::after{
+            font-size: 25px!important;
+        }
+    }
+
+    .swiper-button-prev {
+        margin-left: 40px;
+    }
+    .swiper-button-next {
+        margin-right: 40px;
+    }
+}
+
+.swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+.slide-row{
+    width: $full-percent;
+    height: $full-percent;
+    @include centered;
+    &_left {
+        padding-left: 35px;
+        .p1{
+            font-size: $size-small-lg;
+            margin-left: 3px;
+            letter-spacing: 4px;
+            margin-bottom: 3vh;
+            position: relative;
+            width: 150%;
+        }
+        h6{
+            font-family: $family-bold;
+            font-size: $size-middle;
+            margin-top: -1vh;
+            margin-bottom: 8vh;
+            text-align: start
+        }
+        .p2 {
+            font-size: 0.9rem;
+            margin-top: 0vh;
+        }
+
+        .p3 {
+            margin-top: 0vh;
+            .btn-general {
+                width: 180px;
+                height: 40px;
+                border-radius: 20px;
+                background: linear-gradient(90deg, rgba(247,127,0, .8) 0%, rgba(247,127,0, .1) 0%, rgba(244,244,244, .3) 100%);
+                font-size: $size-normal;
+                margin-top: 10vh;
+            }
+        }
+    }
+
+    &_right {
+        @include centered;
+        padding: $null;
+        margin: $null;
+        img {
+            width: $full-percent;
+            max-width: $full-percent;
+            height: $full-percent;
+            padding: $null;
+            margin: $null;
+        }
+        .img-portrait {
+            width: 60%;
+            max-width: 60%;
+            background-size: cover;
+            margin-top: -3vh;
+        }
+    }
+}
+
+.slide-row-mobile{
+    display: none;
+}
+
+.cover-bloc{
+    height: $full-vh;
+    width: $full-percent;
+    background: linear-gradient(30deg, rgba(244,244,244, .4), rgba(247,127,0, .5) 0%, rgba(244,244,244, .5) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    cursor: pointer;
+    @include centered;
+    display: none;
+
+    .close-cover{
+        position: fixed;
+        top: 20vh;
+        right: 5%;
+        z-index: 25;
+    }
+
+    .row-menu, .row-menu-categorie{
+        @include centered;
+        width: 80%;
+        height: $full-percent;
+        --animate-duration: 300ms;
+        --animate-delay: 0.3s;
+        &_item{
+            @include centered;
+        }
+    }
+
+    .row-menu-categorie {
+        width: 80%;
+        .swiper{
+            width: $full-percent;
+            height: $full-percent;
+            @include centered;
+            margin-top: 0vh;
+            .swiper-slide{
+                @include centered;
+                background-position: center;
+                width: $full-percent;
+                height: $full-percent;
+                margin-top: 0vh;
+                background: transparent;
+                filter: blur(0px);
+            }
+
+            .swiper-slide-active{
+                filter: blur(0px);
+                background: transparent;
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                color: $white;
+                background: transparent;
+                height: 30px;
+                width: 30px;
+                border-radius: 100%;
+
+                &::after, &::after{
+                    font-size: 25px!important;
+                    color: $black;
+                }
+            }
+
+            .swiper-button-prev {
+                margin-left: 0px;
+            }
+            .swiper-button-next {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.row-menu_item_row {
+    @include centered;
+    margin-top: 5vh;
+    &_circle {
+        height: 140px;
+        width: 140px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid $black;
+        @include centered;
+        &:hover{
+            height: 180px;
+            width: 180px;
+        }
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+
+        &--categorie {
+            height: 120px;
+            width: 120px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid $black;
+            @include centered;
+            &:hover{
+                height: 140px;
+                width: 140px;
+            }
+        }
+    }
+
+
+    &_text {
+        text-align: center;
+        margin-top: 3vh;
+    }
+}
+
+//ALERT ICON BLOC
+.alert-icon-bloc {
+    background: rgba(247, 127, 0, .08);
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    top: 16vh;
+    left: 8%;
+    z-index: 30;
+    padding: 10px;
+    div {
+        height: $full-percent;
+        width: $full-percent;
+        @include centered;
+        border-radius: 50px;
+        background: rgba(247, 127, 0, .3);
+        color: $white;
+        cursor: pointer;
+    }
+}
+
+//ALERT CONTAINER
+.alert-container {
+    width: $full-percent;
+    height: $full-percent;
+    position: fixed;
+    top: 5vh;
+    left: 10%;
+    width: 380px;
+    z-index: 30;
+    @include centered;
+    display: none;
+    .display-alerts {
+        z-index: 30;
+        @include centered;
+        overflow: hidden;
+        .row {
+            width: $full-percent;
+            height: $full-percent;
+            padding: 0;
+            margin: 0;
+            a {
+                text-decoration: none;
+                color: $black;
+            }
+        }
+    }
+}
+
+//AN ALERT
+.an-alert {
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 0;
+    background: rgba(247, 127, 0, .09);
+    margin-bottom: 2vh;
+    border-radius: 4px;
+    cursor: pointer;
+    @include centered;
+    p {
+        @include centered;
+        svg {
+            color: rgba(247, 127, 0, .4);
+            position: relative;
+            top: 4px;
+        }
+        span {
+            margin-left: 10px;
+            margin-top: 1vh;
+            font-weight: bold;
+        }
+        .bi-x-circle {
+            color: $black;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 1200PX) -----------------------------------------------------------/*/
+@media screen and (max-width: 1200px) {
+    .swiper{
+        .swiper-slide{
+            width: 90%;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            height: 50px;
+            width: 50px;
+
+            &::after, &::after{
+                font-size: 20px!important;
+            }
+        }
+
+        .swiper-button-prev {
+            margin-left: 0px;
+        }
+        .swiper-button-next {
+            margin-right: 0px;
+        }
+    }
+
+
+    .slide-row{
+        &_left {
+            .p2 {
+                font-size: $size-small;
+            }
+            h6{
+                font-size: $size-middle-lg;
+            }
+            .p3 {
+                .btn-general {
+                    font-size: $size-small;
+                }
+            }
+        }
+    }
+
+    .row-menu_item_row {
+        &_circle {
+            height: 120px;
+            width: 120px;
+            &:hover{
+                height: 150px;
+                width: 150px;
+            }
+        }
+
+        &_text {
+            font-size: $size-small;
+        }
+    }
+}
+
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 992PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 992px) {
+
+    .container-bloc-pc{display: none}
+    .container-bloc-mobile{display: block}
+
+    .swiper{
+        height: 97vh;
+        @include centered;
+        margin-top: 10vh;
+        .swiper-slide{
+            width: 94%;
+            height: 95%;
+            margin-top: 0vh;
+        }
+    }
+
+    .slide-row{
+        &_left {
+            padding-left: 0px;
+            text-align: center;
+            margin-top: -10vh;
+            position: relative;
+            .p1{
+                letter-spacing: 4px;
+                position: relative;
+                width: 100%;
+                margin-left: 0px;
+                margin-top: 2vh;
+                margin-bottom: 0.5vh;
+            }
+            h6{
+                margin-top: 0vh;
+                margin-bottom: 3vh;
+                text-align: center;
+            }
+            .p2 {
+                width: 80%;
+                margin-left: 10%;
+                margin-top: 0vh;
+            }
+
+            .p3 {
+                margin-top: 2vh;
+                .btn-general {
+                    width: 150px;
+                    margin-top: 1vh;
+                }
+            }
+        }
+
+        &_right {
+            img {
+                width: 65%;
+                max-width: 65%;
+            }
+            .img-portrait {
+                width: 33%;
+                max-width: 33%;
+                margin-top: -4vh;
+            }
+        }
+    }
+
+    .cover-bloc{
+        .row-menu-categorie {
+            width: $full-percent;
+        }
+    }
+}
+
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 768PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 768px) {
+    .swiper{
+        .swiper-slide{
+            width: $full-percent;
+        }
+    }
+
+    .slide-row{
+        &_right {
+            img {
+                width: 80%;
+                max-width: 80%;
+            }
+            .img-portrait {
+                width: 45%;
+                max-width: 45%;
+                margin-top: -3vh;
+            }
+        }
+    }
+
+    .cover-bloc{
+        .row-menu{
+            width: 90%;
+        }
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 576PX) ------------------------------------------------------------/*/
+@media screen and (max-width: 576px) {
+    .slide-row{
+        &_right {
+            img {
+                width: $full-percent;
+                max-width:$full-percent;
+            }
+            .img-portrait {
+                width: 55%;
+                max-width: 55%;
+            }
+        }
+    }
+}

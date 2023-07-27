@@ -1,0 +1,206 @@
+@import "../partials/utils/variables";
+.container-bloc-live{
+    width: $full-percent;
+    height: $full-vh;
+    @include centered;
+    overflow: hidden;
+}
+
+.rw-bloc-live{
+    width: $full-percent;
+    height: $full-percent;
+    @include centered;
+    margin-top: 22vh;
+    overflow: hidden;
+    &_left{
+        @include centered;
+        height: $full-vh;
+        .channels-container {
+            background: linear-gradient(90deg, rgba(247,127,0, .03) 0%, rgba(247,127,0, .05) 0%, rgba(247,127,0, .05) 100%);
+            width: $full-percent;
+            height: $full-percent;
+            margin: 30px;
+            @include centered;
+            .row {
+                width: $full-percent;
+                height: 80%;
+                padding: 0 40px 0 40px;
+                margin-top: -10vh;
+                @include centered;
+                .logo-ic {
+                    background: rgba(255, 255, 255, .2);
+                    border-radius: 5px;
+                    height: 100px;
+                    cursor: pointer;
+                    @include centered;
+                }
+            }
+        }
+    }
+
+    &_right {
+        height: 70vh;
+        margin-left: -42px;
+        margin-top: -10vh;
+        background: linear-gradient(90deg, rgba(247,127,0, .05) 0%, rgba(247,127,0, .05) 0%, rgba(247,127,0, .03) 100%);
+        @include centered;
+        .video-container {
+            width: $full-percent;
+            height: 60vh;
+            video {
+                display: none;
+            }
+        }
+    }
+}
+
+.cover-bloc{
+    height: $full-vh;
+    width: $full-percent;
+    background: linear-gradient(30deg, rgba(244,244,244, .4), rgba(247,127,0, .5) 0%, rgba(244,244,244, .5) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    cursor: pointer;
+    @include centered;
+    display: none;
+
+    .close-cover{
+        position: fixed;
+        top: 20vh;
+        right: 5%;
+        z-index: 25;
+    }
+
+    .row-menu, .row-menu-categorie{
+        @include centered;
+        width: 80%;
+        height: $full-percent;
+        --animate-duration: 300ms;
+        --animate-delay: 0.3s;
+        &_item{
+            @include centered;
+        }
+    }
+
+    .row-menu-categorie {
+        width: 80%;
+        .swiper{
+            width: $full-percent;
+            height: $full-percent;
+            @include centered;
+            margin-top: 0vh;
+            .swiper-slide{
+                @include centered;
+                background-position: center;
+                width: $full-percent;
+                height: $full-percent;
+                margin-top: 0vh;
+                background: transparent;
+                filter: blur(0px);
+            }
+
+            .swiper-slide-active{
+                filter: blur(0px);
+                background: transparent;
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                color: $white;
+                background: transparent;
+                height: 30px;
+                width: 30px;
+                border-radius: 100%;
+
+                &::after, &::after{
+                    font-size: 25px!important;
+                    color: $black;
+                }
+            }
+
+            .swiper-button-prev {
+                margin-left: 0px;
+            }
+            .swiper-button-next {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.row-menu_item_row {
+    @include centered;
+    margin-top: 5vh;
+    &_circle {
+        height: 140px;
+        width: 140px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid $black;
+        @include centered;
+        &:hover{
+            height: 180px;
+            width: 180px;
+        }
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+
+        &--categorie {
+            height: 120px;
+            width: 120px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid $black;
+            @include centered;
+            &:hover{
+                height: 140px;
+                width: 140px;
+            }
+        }
+    }
+
+
+    &_text {
+        text-align: center;
+        margin-top: 3vh;
+    }
+}
+
+/*/ ---------------------------------------------------------- RESPONSIVE DESIGN (MAX WIDTH: 1200PX) -----------------------------------------------------------/*/
+@media screen and (max-width: 1200px) {
+
+
+    .rw-bloc-live{
+        &_left{
+            .channels-container {
+                .row {
+                    padding: 0 20px 0 20px;
+                    .logo-ic {
+                        img {
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .row-menu_item_row {
+        &_circle {
+            height: 120px;
+            width: 120px;
+            &:hover{
+                height: 150px;
+                width: 150px;
+            }
+        }
+
+        &_text {
+            font-size: $size-small;
+        }
+    }
+
+}

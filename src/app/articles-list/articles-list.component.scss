@@ -1,0 +1,98 @@
+@import "../partials/utils/variables";
+
+.swiper{
+    width: $full-percent;
+    height: 90vh;
+    @include centered;
+    margin-top: 15vh;
+    .swiper-slide{
+        @include centered;
+        background-size: cover;
+        background-position: center;
+        width: 80%;
+        height: 80%;
+        margin-top: 7vh;
+        background: rgba(247, 127, 0, .04);
+        filter: blur(20px);
+    }
+
+    .swiper-slide-active{
+        filter: blur(0px);
+        background: $white-rgba;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        color: $white;
+        background: rgba(247, 127, 0, .3);
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+
+        &::after, &::after{
+            font-size: 25px!important;
+        }
+    }
+
+    .swiper-button-prev {
+        margin-left: 40px;
+    }
+    .swiper-button-next {
+        margin-right: 40px;
+    }
+}
+
+.swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+.slide-row{
+    width: $full-percent;
+    height: $full-percent;
+    @include centered;
+    &_left {
+        padding-left: 35px;
+        .p1{
+            font-size: $size-small;
+            margin-left: 3px;
+            letter-spacing: 4px;
+            margin-bottom: 3vh;
+        }
+        h6{
+            font-family: $family-bold;
+            font-size: $size-middle;
+            margin-top: -1vh;
+            margin-bottom: 8vh;
+            text-align: start
+        }
+        .p2 {
+            font-size: 0.9rem;
+            margin-top: 0vh;
+            .btn-general {
+                width: 180px;
+                height: 40px;
+                border-radius: 20px;
+                background: linear-gradient(90deg, rgba(247,127,0, .8) 0%, rgba(247,127,0, .1) 0%, rgba(244,244,244, .3) 100%);
+                font-size: $size-normal;
+                margin-top: 10vh;
+            }
+        }
+    }
+
+    &_right {
+        @include centered;
+        padding: $null;
+        margin: $null;
+        img {
+            width: $full-percent;
+            max-width: $full-percent;
+            height: $full-percent;
+            padding: $null;
+            margin: $null;
+        }
+        .img-portrait {
+            width: 60%;
+            max-width: 60%;
+            background-size: cover;
+        }
+    }
+}

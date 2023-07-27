@@ -1,0 +1,147 @@
+<!-- CONTAINER DE LA PAGE -->
+<div class="container-bloc-interest animate__animated animate__fadeIn">
+    <!-- BLOC DE CODE CONTENANT LE TEXTE STATIQUE A GAUCHE ET LES INPUTS À DROITE  -->
+    <div class="row rw-bloc-interest text-center animate__animated animate__fadeIn">
+        <div class="col-lg-6 md-12 rw-bloc-interest_left">
+            <img src="../../assets/backgrounds/Ministere_assetsD.png" alt="illustration">
+        </div>
+
+        <!-- BLOC DE CODE DE DROITE CONTENANT LES TEXTES  -->
+        <div class="col-lg-6 col-md-12 rw-bloc-interest_right">
+            <p class="p1">Débuter sur la plateforme </p>
+            <h6>
+                CHOIX DES CENTRES D'INTÉRÊT
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                </svg>
+            </h6>
+            <p class="p2">
+                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié.
+            </p>
+        </div>
+
+
+        <!-- BLOC DE CODE CONTENANT LES CENTRES D'INTERET EN BAS  -->
+        <div class="col-lg-12 rw-bloc-interest_bottom">
+            <div class="row interests-bloc">
+                <form action="#">
+                    <swiper [slidesPerView]="5" [spaceBetween]="10" [navigation]="true">
+                        <ng-template swiperSlide>
+                            <div class="row">
+                                <div class="col-lg-12 input-group">
+                                    <input class="form-check-input" type="checkbox" value="Développement">
+                                </div>
+                                <div class="col-lg-12 form-text">Développement</div>
+                            </div>
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <div class="row">
+                                <div class="col-lg-12 input-group">
+                                    <input class="form-check-input" type="checkbox" value="Politique">
+                                </div>
+                                <div class="col-lg-12 form-text">Politique</div>
+                            </div>
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <div class="row">
+                                <div class="col-lg-12 input-group">
+                                    <input class="form-check-input" type="checkbox" value="Opportunités">
+                                </div>
+                                <div class="col-lg-12 form-text">Opportunités</div>
+                            </div>
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <div class="row">
+                                <div class="col-lg-12 input-group">
+                                    <input class="form-check-input" type="checkbox" value="Excellence">
+                                </div>
+                                <div class="col-lg-12 form-text">Excellence</div>
+                            </div>
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <div class="row">
+                                <div class="col-lg-12 input-group">
+                                    <input class="form-check-input" type="checkbox" value="Infrastructures">
+                                </div>
+                                <div class="col-lg-12 form-text">Infrastructures</div>
+                            </div>
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <div class="row">
+                                <div class="col-lg-12 input-group">
+                                    <input class="form-check-input" type="checkbox" value="Culture">
+                                </div>
+                                <div class="col-lg-12 form-text">Culture</div>
+                            </div>
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <div class="row">
+                                <div class="col-lg-12 input-group">
+                                    <input class="form-check-input" type="checkbox" value="Découverte">
+                                </div>
+                                <div class="col-lg-12 form-text">Découverte</div>
+                            </div>
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <div class="row">
+                                <div class="col-lg-12 input-group">
+                                    <input class="form-check-input" type="checkbox" value="Education">
+                                </div>
+                                <div class="col-lg-12 form-text">Education</div>
+                            </div>
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <div class="row">
+                                <div class="col-lg-12 input-group">
+                                    <input class="form-check-input" type="checkbox" value="Santé">
+                                </div>
+                                <div class="col-lg-12 form-text">Santé</div>
+                            </div>
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <div class="row">
+                                <div class="col-lg-12 input-group">
+                                    <input class="form-check-input" type="checkbox" value="Sport">
+                                </div>
+                                <div class="col-lg-12 form-text">Sport</div>
+                            </div>
+                        </ng-template>
+                        <ng-template swiperSlide>
+                            <div class="row">
+                                <div class="col-lg-12 input-group">
+                                    <input class="form-check-input" type="checkbox" value="Business">
+                                </div>
+                                <div class="col-lg-12 form-text">Business</div>
+                            </div>
+                        </ng-template>
+                    </swiper>
+
+                    <button type="submit" class="btn btn-submit btn-general" (click)="OnLanding()"> Valider l'inscription </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ALERT DISPLAY CONTAINER -->
+<div class="alert-container">
+    <div class="display-alerts">
+        <div class="row">
+            <div class="an-alert">
+                <div class="row">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                        </svg>
+                        <span> Veuillez cochez les thématiques qui vous intéressent </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-circle close-alert" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
